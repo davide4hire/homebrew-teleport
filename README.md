@@ -25,3 +25,16 @@ brew link --force --dry-run teleport@<version>
 - [Teleport 3.0](https://gravitational.com/teleport/docs/ver/3.0)
 - [Teleport 3.1](https://gravitational.com/teleport/docs/ver/3.1)
 - [Teleport 3.2](https://gravitational.com/teleport/docs/ver/3.2)
+- [Teleport 4.0](https://gravitational.com/teleport/docs/ver/4.0)
+
+# Adding New Versions
+Adding another version is fairly straightforward. Technically, it is
+adding a file into the `Formula` subdirectory with the proper
+information for the version. Realisticly, it's better to copy an
+existing file and make the changes to it.
+
+There are three changes - the name of the class (on first line), the
+URL to the archive file, the sha256 hash of the archive
+file. Computing the sha256 hash requires the archive file. So it must
+be downloaded locally and then run the `shasum -a 256` command on a
+Mac.
