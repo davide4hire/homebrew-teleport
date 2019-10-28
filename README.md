@@ -28,6 +28,8 @@ brew link --force --dry-run teleport@<version>
 - [Teleport 4.0](https://gravitational.com/teleport/docs/ver/4.0)
 - [Teleport 4.1](https://gravitational.com/teleport/docs/ver/4.1)
 
+=======
+
 # Adding New Versions
 Adding another version is fairly straightforward. Technically, it is
 adding a file into the `Formula` subdirectory with the proper
