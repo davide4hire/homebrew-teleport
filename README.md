@@ -1,9 +1,9 @@
 # Version Specific Teleport Tap
 
-homebrew-core only has formula for latest versions of teleport.  This Tap allows the installs of previous major versions of Teleport.
+homebrew-core only has formula for the latest version of teleport.  This Tap allows the install of previous major versions of Teleport.
 
 ```bash
-brew tap jmoney8080/teleport
+brew tap davide4hire/teleport
 brew install teleport@<version>
 ```
 
@@ -27,6 +27,7 @@ brew link --force --dry-run teleport@<version>
 - [Teleport 3.2](https://gravitational.com/teleport/docs/ver/3.2)
 - [Teleport 4.0](https://gravitational.com/teleport/docs/ver/4.0)
 - [Teleport 4.1](https://gravitational.com/teleport/docs/ver/4.1)
+- [Teleport 4.2](https://gravitational.com/teleport/docs/ver/4.2)
 
 =======
 
