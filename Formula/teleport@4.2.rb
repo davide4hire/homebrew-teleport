@@ -1,8 +1,8 @@
 class TeleportAT42 < Formula
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://gravitational.com/teleport"
-  url "https://get.gravitational.com/teleport-v4.2.10-darwin-amd64-bin.tar.gz"
-  sha256 "425b48c1de4da30a8ad291d884612c248d4a2ccc6527bdfb59d0616166f6bd14"
+  url "https://github.com/gravitational/teleport/archive/v4.2.10.tar.gz"
+  sha256 "487ddde0bb5e303d0e116e3f4d3155f1ed6792b7cfb8d823d8843a69b37ceed9"
 
   keg_only :versioned_formula
 
