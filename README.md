@@ -1,40 +1,75 @@
 # Version Specific Teleport Tap
 
-homebrew-core only has formula for the latest version of teleport.  This Tap allows the install of previous major versions of Teleport.
+This repo can be used as a Homebrew `tap` to facilitate the
+installation of a specific `major.minor` version of the Teleport client
+for Mac OSX. Why? Because homebrew-core only has formula for the
+latest version of teleport. As Gravitational updates Teleport, the
+homebrew-core version of teleport is updated. And sometimes newer
+versions of the client are not compatible with older versions of the
+Teleport servers available to you.
 
-```bash
-brew tap davide4hire/teleport
-brew install teleport@<version>
-```
+## How to Use this Tap
 
-You can either update your `$PATH` for the version of Teleport installed, or you can tell Homebrew to link a version for you:
+It is easy to add this repo as a `tap` for Homebrew. The following
+command can be used:
 
-```bash
-brew link --force teleport@<version>
-```
+    brew tap davide4hire/teleport
+
+And, once the tap is available the following command will install a
+version: 
+
+    brew install teleport@<version>
+
+Where `<version>` is a major.minor version like 3.1 or 4.2. The patch
+version is controlled by the formula in this repo. If a patch update
+is required or available, it can be installed via the standard
+Homebrew command:
+
+    brew upgrade teleport@<version>
+
+## Using Different Versions of Teleport
+
+Once you've installed a specific version of Telport, you have to
+enable it. The `brew install` command put it in the correct location,
+but it did not link it into `/usr/local/bin`. There should have been a
+message in the output of the install command to that effect.
+
+There are two methods to make a version available to interactive
+shells. You can update your `PATH` environment variable to include the
+specific Teleport version `bin` directory. Just be sure to put it before
+`/usr/local/bin`. The directory will be something like
+`/usr/local/Cellar/teleport@<version>/x.x.x/bin`. 
+
+The other method is to have `brew` put the links into
+`/usr/local/bin`. This can be done via the command:
+
+    brew link --overwrite --force teleport@<version>
 
 If the above command is scary then the following command will print what is going to be changed
 
-```bash
-brew link --force --dry-run teleport@<version>
-```
+    brew link --overwrite --force --dry-run teleport@<version>
+
+It will probably show which links would be removed, but it doesn't
+show they would be recreated. But they do get recreated properly. 
 
 ## Versions
 
-- [Teleport 2.7](https://gravitational.com/teleport/docs/ver/2.7/)
-- [Teleport 3.0](https://gravitational.com/teleport/docs/ver/3.0)
-- [Teleport 3.1](https://gravitational.com/teleport/docs/ver/3.1)
-- [Teleport 3.2](https://gravitational.com/teleport/docs/ver/3.2)
-- [Teleport 4.0](https://gravitational.com/teleport/docs/ver/4.0)
-- [Teleport 4.1](https://gravitational.com/teleport/docs/ver/4.1)
-- [Teleport 4.2](https://gravitational.com/teleport/docs/ver/4.2)
+The following versions are currently available:
+
+- [Teleport 2.7](https://gravitational.com/teleport/docs/ver/2.7/) @ 2.7.6
+- [Teleport 3.0](https://gravitational.com/teleport/docs/ver/3.0) @ 3.0.1
+- [Teleport 3.1](https://gravitational.com/teleport/docs/ver/3.1) @ 3.1.9
+- [Teleport 3.2](https://gravitational.com/teleport/docs/ver/3.2) @ 3.2.6
+- [Teleport 4.0](https://gravitational.com/teleport/docs/ver/4.0) @ 4.0.16
+- [Teleport 4.1](https://gravitational.com/teleport/docs/ver/4.1) @ 4.1.10
+- [Teleport 4.2](https://gravitational.com/teleport/docs/ver/4.2) @ 4.2.10
 
 =======
 
 # Adding New Versions
 Adding another version is fairly straightforward. Technically, it is
 adding a file into the `Formula` subdirectory with the proper
-information for the version. Realisticly, it's better to copy an
+information for the version. Realistically, it's better to copy an
 existing file and make the changes to it.
 
 There are three changes - the name of the class (on first line), the
