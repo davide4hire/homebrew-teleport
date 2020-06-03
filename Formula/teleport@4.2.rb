@@ -15,6 +15,6 @@ class TeleportAT42 < Formula
   end
 
   test do
-    system "#{bin}/teleport", "version"
-  end
+#    system "#{bin}/teleport", "version"
+    assert_match version.to_s, shell_output("#{bin}/teleport version")  end
 end
