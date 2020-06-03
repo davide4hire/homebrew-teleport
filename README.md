@@ -1,9 +1,11 @@
 # Version Specific Teleport Tap
 
-This repo can be used as a Homebrew `tap` to facilitate the
-installation of a specific `major.minor` version of the Teleport client
-for Mac OSX. Why? Because homebrew-core only has formula for the
-latest version of teleport. As Gravitational updates Teleport, the
+This repo can be used as a [Homebrew](https://brew.sh/) `tap` to facilitate the
+installation of a specific `major.minor` version of the
+[Teleport](https://github.com/gravitational/teleport) client for Mac
+OSX. Why? Because homebrew-core only has formula for the latest
+version of teleport. As [Gravitational](https://gravitational.com/)
+updates [Teleport](https://gravitational.com/teleport/), the
 homebrew-core version of teleport is updated. And sometimes newer
 versions of the client are not compatible with older versions of the
 Teleport servers available to you.
@@ -64,7 +66,6 @@ The following versions are currently available:
 - [Teleport 4.1](https://gravitational.com/teleport/docs/ver/4.1) @ 4.1.10
 - [Teleport 4.2](https://gravitational.com/teleport/docs/ver/4.2) @ 4.2.10
 
-=======
 
 # Adding New Versions
 Adding another version is fairly straightforward. Technically, it is
@@ -77,3 +78,11 @@ URL to the archive file, the sha256 hash of the archive
 file. Computing the sha256 hash requires the archive file. So it must
 be downloaded locally and then run the `shasum -a 256` command on a
 Mac.
+
+# Acknowledgements
+
+This repository started as a fork of
+[repository](https://github.com/jmoney8080/homebrew-teleport) from
+[Jonathan Monette](https://github.com/jmoney8080). I added more
+versions and figured out a way to install the binary tar file instead
+of building from the source.
