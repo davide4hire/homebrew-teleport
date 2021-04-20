@@ -29,6 +29,48 @@ Homebrew command:
 
     brew upgrade teleport@<version>
 
+Below is the transcript of a `brew install` command:
+````/bin/bash
+$ brew install teleport@5.2
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 2 taps (davide4hire/teleport and homebrew/cask).
+==> New Formulae
+davide4hire/teleport/teleport@5.2                            davide4hire/teleport/teleport@6.1
+==> Updated Casks
+Updated 4 casks.
+
+==> Installing teleport@5.2 from davide4hire/teleport
+==> Downloading https://ghcr.io/v2/homebrew/core/go/manifests/1.16.3
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/go/blobs/sha256:69c28f5e60612801c66e51e93d32068f822b245ab83246cb6cb3745
+==> Downloading from https://pkg-containers-az.githubusercontent.com/ghcr1/blobs/sha256:69c28f5e60612801c66e51e93d32068f
+######################################################################## 100.0%
+==> Downloading https://get.gravitational.com/teleport-v5.2.1-darwin-amd64-bin.tar.gz
+######################################################################## 100.0%
+==> Installing dependencies for davide4hire/teleport/teleport@5.2: go
+==> Installing davide4hire/teleport/teleport@5.2 dependency: go
+==> Pouring go--1.16.3.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/go/1.16.3: 9,955 files, 503.5MB
+==> Installing davide4hire/teleport/teleport@5.2
+==> Caveats
+teleport@5.2 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have teleport@5.2 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/teleport@5.2/bin:$PATH"' >> /Users/davide/.bash_profile
+
+==> Summary
+🍺  /usr/local/Cellar/teleport@5.2/5.2.1: 7 files, 164MB, built in 15 seconds
+==> Caveats
+==> teleport@5.2
+teleport@5.2 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have teleport@5.2 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/teleport@5.2/bin:$PATH"' >> /Users/davide/.bash_profile
+````
+
 ## Using Different Versions of Teleport
 
 Once you've installed a specific version of Telport, you have to
