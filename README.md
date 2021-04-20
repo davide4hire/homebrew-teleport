@@ -107,6 +107,7 @@ The following versions are currently available:
 - [Teleport 4.0](https://goteleport.com/docs/ver/4.0) @ 4.0.16
 - [Teleport 4.1](https://goteleport.com/docs/ver/4.1) @ 4.1.10
 - [Teleport 4.2](https://goteleport.com/docs/ver/4.2) @ 4.2.10
+- [Teleport 5.2](https://goteleport.com/docs/ver/5.2) @ 5.2.1
 - [Teleport 6.1](https://goteleport.com/docs/ver/6.1) @ 6.1.1
 
 # Adding New Versions
