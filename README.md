@@ -58,14 +58,14 @@ show they would be recreated. But they do get recreated properly.
 
 The following versions are currently available:
 
-- [Teleport 2.7](https://gravitational.com/teleport/docs/ver/2.7/) @ 2.7.6
-- [Teleport 3.0](https://gravitational.com/teleport/docs/ver/3.0) @ 3.0.1
-- [Teleport 3.1](https://gravitational.com/teleport/docs/ver/3.1) @ 3.1.9
-- [Teleport 3.2](https://gravitational.com/teleport/docs/ver/3.2) @ 3.2.6
-- [Teleport 4.0](https://gravitational.com/teleport/docs/ver/4.0) @ 4.0.16
-- [Teleport 4.1](https://gravitational.com/teleport/docs/ver/4.1) @ 4.1.10
-- [Teleport 4.2](https://gravitational.com/teleport/docs/ver/4.2) @ 4.2.10
-
+- [Teleport 2.7](https://goteleport.com/docs/ver/2.7) @ 2.7.6
+- [Teleport 3.0](https://goteleport.com/docs/ver/3.0) @ 3.0.1
+- [Teleport 3.1](https://goteleport.com/docs/ver/3.1) @ 3.1.9
+- [Teleport 3.2](https://goteleport.com/docs/ver/3.2) @ 3.2.6
+- [Teleport 4.0](https://goteleport.com/docs/ver/4.0) @ 4.0.16
+- [Teleport 4.1](https://goteleport.com/docs/ver/4.1) @ 4.1.10
+- [Teleport 4.2](https://goteleport.com/docs/ver/4.2) @ 4.2.10
+- [Teleport 6.1](https://goteleport.com/docs/ver/6.1) @ 6.1.1
 
 # Adding New Versions
 Adding another version is fairly straightforward. Technically, it is
@@ -78,6 +78,16 @@ URL to the archive file, the sha256 hash of the archive
 file. Computing the sha256 hash requires the archive file. So it must
 be downloaded locally and then run the `shasum -a 256` command on a
 Mac.
+
+The teleport release artifacts can be downloaded from
+[Download Teleport](https://goteleport.com/teleport/download)
+pages. For a mac, the following commands will download the file for a
+version and compute the SHA256 sum:
+
+    VERSION=5.2.1
+	FILE_NAME=teleport-v${VERSION}-darwin-amd64-bin.tar.gz
+	wget https://get.gravitational.com/${FILE_NAME}
+	shasum -a 256 ${FILE_NAME}
 
 # Acknowledgements
 
